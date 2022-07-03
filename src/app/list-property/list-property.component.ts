@@ -8,7 +8,7 @@ import { PropertyI, MainService } from '../main.service';
 })
 export class ListPropertyComponent implements OnInit {
 
-  constructor( private mainService: MainService ) { }
+  constructor( private mainService: MainService) { }
 
 
   @Input() propertyList: PropertyI[];
@@ -17,8 +17,8 @@ export class ListPropertyComponent implements OnInit {
   }
 
   async deleteProperty(index: number) {
-    await this.mainService.deleteProperty(index);
+    const id = this.propertyList[index].id;
+    await this.mainService.deleteProperty(id);
     this.refetchList.emit();
   }
-
 }

@@ -1,4 +1,9 @@
 <app-header (addPropertyChild) = "addProperty()" ></app-header>
-<app-add-property (newDataChild) ="newData($event)" *ngIf="addPropertyToggle"></app-add-property>
-<app-list-property *ngIf="!addPropertyToggle" [propertyList] = "propertyList" (refetchList)="getProperty()"></app-list-property>
+
+<app-add-property (newDataChild) ="newData($event)" *ngIf="addPropertyToggle && !loading"></app-add-property>
+<app-list-property *ngIf="!addPropertyToggle && !loading" [propertyList] = "propertyList" (refetchList)="getProperty()"></app-list-property>
+
+<div class="loading" *ngIf="loading">
+    <h1> Loading...</h1>
+</div>
 <router-outlet></router-outlet>
