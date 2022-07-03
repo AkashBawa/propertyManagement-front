@@ -1,0 +1,22 @@
+<div class="add-main">
+    <div class="form">
+        <form [formGroup] ="newPropertyForm">
+            <div class="formControl">
+                <label> Name</label>
+                <input formControlName="name" type="text"/>
+            </div>
+            <div class="formControl">
+                <label> Description</label>
+                <input formControlName="description" type="textarea"/>
+            </div>
+            <div class="formControl">
+                <label> Size</label>
+                <input formControlName="size" type="number"/>
+            </div>
+            <div class="button-div">
+                <button (click)="submitForm()">Submit</button>
+                <button (click)="cancelForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

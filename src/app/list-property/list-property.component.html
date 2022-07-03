@@ -1,0 +1,11 @@
+<div class="main-div">
+    <div class="list-property" *ngFor="let property of propertyList">
+        <h2> Name: {{property.name}}</h2>
+        <h4> Description: {{property.description}}</h4>
+        <h4> size: {{property.size}}</h4>
+
+        <div>
+            <button (click)="deleteProperty()">Delete</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.add-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form {
+    width: 350px;
+    .formControl {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+}
+
+.button-div {
+    display: flex;
+    button {
+        padding: 2;
+        width: 100%;
+        margin-right: 10px
+    }
+}
